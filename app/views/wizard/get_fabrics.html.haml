@@ -1,0 +1,25 @@
+%form{:action=> "choose_feature"}
+  %ul
+    - for fabric in @data
+      %li
+        %label{ :for => "fabric#{fabric.id}" }
+          %span
+            =   fabric.name.capitalize
+          %img{ :src => fabric.photo.url }
+        %input{ :name => "fabric", 
+        :type => "radio", "id" => "fabric" + fabric.id.to_s, :value=>fabric.name }
+  = submit_tag 'continue' if @data.size >0
+
+    
+
+
+
+%script{:type => "text/javascript"}
+  :plain
+    $(document).ready(
+    function() {
+    $("input").change(function(){
+    $(".highlighted").removeClass("highlighted");
+    $(this).parent().addClass("highlighted");
+    });
+    });

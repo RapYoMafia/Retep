@@ -1,0 +1,11 @@
+- semantic_form_for (feature, :html => {:multipart => true}) do |form|
+  - form.inputs do
+    = form.input :name
+    = form.input :feature_category
+    = form.input :photo, :as => :file
+    - if feature.id
+      %label.current_image Current Image
+      %div.current_image= image_tag feature.photo.url(:thumb)
+
+
+  = form.buttons

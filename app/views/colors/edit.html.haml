@@ -1,0 +1,6 @@
+%h2 Editing color
+= render :partial => "form", :locals => {:color => @color}
+- content_for :sub_menu do
+  %li= link_to 'Show', @color
+  %li= link_to 'Back', colors_path, :class=>"back_link"
+  %li= link_to 'Destroy', @color, :confirm => 'Are you sure?', :method => :delete  , :class=>"delete_link"

@@ -1,0 +1,22 @@
+%h2 Features
+#filter
+  - form_remote_tag(:url=> {:controller => "features", :action => "get_features"}, :update=>"features_table") do
+    %b Filter
+    = collection_select(:feature_category, :name, @feature_categories, :id, :name, {:include_blank => true}, {:id => "feature_categories_collection"})
+    = submit_tag 'show'
+    = link_to 'reset', features_path
+    %span.clear &nbsp;
+
+
+- if !@features.empty?
+  .features#features_table
+    = render :partial => "feature", :locals => {:features => @features}
+  = will_paginate(@features)
+- else
+  %p There are no features to show yet.
+
+
+
+
+- content_for :sub_menu do
+  %li= link_to 'Create New Feature', new_feature_path, :class=>"add_link"

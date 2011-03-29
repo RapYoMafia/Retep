@@ -1,0 +1,107 @@
+<h1>Editing measurement</h1>
+
+<% form_for(@measurement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :neck_circum %><br />
+    <%= f.text_field :neck_circum %>
+  </p>
+  <p>
+    <%= f.label :shoulder_width %><br />
+    <%= f.text_field :shoulder_width %>
+  </p>
+  <p>
+    <%= f.label :chest_circum %><br />
+    <%= f.text_field :chest_circum %>
+  </p>
+  <p>
+    <%= f.label :front_armhole %><br />
+    <%= f.text_field :front_armhole %>
+  </p>
+  <p>
+    <%= f.label :back_armhole %><br />
+    <%= f.text_field :back_armhole %>
+  </p>
+  <p>
+    <%= f.label :waist_circum %><br />
+    <%= f.text_field :waist_circum %>
+  </p>
+  <p>
+    <%= f.label :hip_circum %><br />
+    <%= f.text_field :hip_circum %>
+  </p>
+  <p>
+    <%= f.label :shirt_length %><br />
+    <%= f.text_field :shirt_length %>
+  </p>
+  <p>
+    <%= f.label :sleeve_length %><br />
+    <%= f.text_field :sleeve_length %>
+  </p>
+  <p>
+    <%= f.label :armhole_circum %><br />
+    <%= f.text_field :armhole_circum %>
+  </p>
+  <p>
+    <%= f.label :bicep_circum %><br />
+    <%= f.text_field :bicep_circum %>
+  </p>
+  <p>
+    <%= f.label :wrist_circum %><br />
+    <%= f.text_field :wrist_circum %>
+  </p>
+  <p>
+    <%= f.label :height_feet %><br />
+    <%= f.text_field :height_feet %>
+  </p>
+  <p>
+    <%= f.label :height_inches %><br />
+    <%= f.text_field :height_inches %>
+  </p>
+  <p>
+    <%= f.label :weight_lb %><br />
+    <%= f.text_field :weight_lb %>
+  </p>
+<!--  <p>-->
+<!--    <%= f.label :shoulder %><br />-->
+<!--    <%= f.text_field :shoulder %>-->
+<!--  </p>-->
+
+<p>
+Shoulder <br>
+<input type="radio" name="measurement[shoulder]" value="Square"> Square
+<input type="radio" name="measurement[shoulder]" value="Average"> Average
+<input type="radio" name="measurement[shoulder]" value="Sloping"> Sloping
+</p>
+
+<!--  <p>-->
+<!--    <%= f.label :chest %><br />-->
+<!--    <%= f.text_field :chest %>-->
+<!--  </p>-->
+<p>
+Chest <br>
+<input type="radio" name="measurement[chest]" value="Muscular"> Muscular
+<input type="radio" name="measurement[chest]" value="Average"> Average
+<input type="radio" name="measurement[chest]" value="Large"> Large
+</p>
+
+
+<!--  <p>-->
+<!--    <%= f.label :body_shape %><br />-->
+<!--    <%= f.text_field :body_shape %>-->
+<!--  </p>-->
+<p>
+Body Shape <br>
+<input type="radio" name="measurement[body_shape]" value="Flat"> Flat
+<input type="radio" name="measurement[body_shape]" value="Average"> Average
+<input type="radio" name="measurement[body_shape]" value="Sloping"> Large
+</p>
+ 
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @measurement %> |
+<%= link_to 'Back', measurements_path %>

@@ -1,0 +1,23 @@
+%h2 Fabrics
+#filter
+  - form_remote_tag(:url=> {:controller => "fabrics", :action => "get_fabrics"}, :update=>"fabrics_table") do
+    %b Filter
+    = collection_select(:color, :name, @colors, :id, :name, {:include_blank=>true}, {:id => "colors_collection"})
+    = collection_select(:style, :name, @styles, :id, :name, {:include_blank=>true}, {:id=> "styles_collection"})
+    = submit_tag 'show'
+    = link_to 'reset', fabrics_path
+    %span.clear &nbsp;
+
+
+
+- if !@fabrics.empty?
+  .fabrics#fabrics_table
+    = render :partial => "fabric", :locals => {:fabrics => @fabrics}
+  = will_paginate(@fabrics)
+- else
+  %p There are no fabrics to show yet.
+
+
+
+- content_for :sub_menu do
+  %li= link_to 'Create New Fabric', new_fabric_path, :class=>"add_link"

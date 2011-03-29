@@ -1,0 +1,6 @@
+%h2 Editing feature_category
+= render :partial => "form", :locals => {:feature_category => @feature_category}
+- content_for :sub_menu do
+  %li= link_to 'Show', @feature_category
+  %li= link_to 'Back', feature_categories_path
+  %li= link_to 'Destroy', @feature_category, :confirm => 'Are you sure?', :method => :delete  

@@ -1,0 +1,21 @@
+%table.data_list
+  %thead
+    %tr
+      %th Preview
+      %th Name
+      %th Color
+      %th Style
+      %th Price
+      %th Edit
+  %tbody
+    - fabrics.each do |resource|
+      %tr
+        %td.preview=image_tag resource.photo.url(:small_thumb)
+        %td=link_to resource.name, resource
+        %td=h resource.color.name
+        %td=h resource.try(:style)
+        -#- raise resource.style.inspect
+        %td=h number_to_currency(resource.price, :unit=>"GBP ")
+        %td.actions
+          = link_to edit_image, edit_resource_path(resource)
+          =# link_to delete_image, resource, :confirm => 'Are you sure?', :method => :delete

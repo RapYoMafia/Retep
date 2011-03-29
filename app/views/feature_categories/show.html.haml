@@ -1,0 +1,8 @@
+%h2= "Feature Category - #{@feature_category.name}"
+
+%p= "Category #{@feature_category.name.capitalize} contains #{@feature_category.features.size} feature(s)"
+= render :partial => "features/feature", :locals => {:features => @feature_category.features}
+
+- content_for :sub_menu do
+  %li= link_to 'Edit', edit_feature_category_path(@feature_category), :class=>"edit_link"
+  %li= link_to 'Back', feature_categories_path, :class=>"back_link"

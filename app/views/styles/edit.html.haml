@@ -1,0 +1,6 @@
+%h2 Editing style
+= render :partial => "form", :locals => {:style => @style}
+- content_for :sub_menu do
+  %li= link_to 'Show', @style
+  %li= link_to 'Back', styles_path, :class=>"back_link"
+  %li= link_to 'Destroy', @style, :confirm => 'Are you sure?', :method => :delete  , :class=>"delete_link"

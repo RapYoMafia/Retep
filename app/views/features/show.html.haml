@@ -1,0 +1,15 @@
+%h2= "Feature  \"#{@feature.name}\""
+- content_tag_for :div, @feature do
+  %ul.show_list
+    %li
+      %strong Name:
+      =h @feature.name
+    %li
+      %strong Category:
+      =h @feature.feature_category.name
+    %li
+      %strong Photo:
+      =image_tag @feature.photo.url
+- content_for :sub_menu do
+  %li= link_to 'Edit', edit_feature_path(@featyre), :class=>"edit_link", :class=>"edit_link"
+  %li= link_to 'Back', features_path, :class=>"back_link", :class=>"back_link"

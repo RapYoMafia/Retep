@@ -1,0 +1,4 @@
+%h2 New style
+= render :partial => "form", :locals => {:style => @style}
+- content_for :sub_menu do
+  %li= link_to 'Back', styles_path, :class=>"back_link"

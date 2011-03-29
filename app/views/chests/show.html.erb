@@ -1,0 +1,9 @@
+<p>
+  <b>Name:</b>
+  <%=h @chest.name %>
+</p>
+<%= image_tag @chest.photo.url (:small)%>
+<br>
+
+<%= link_to 'Edit', edit_chest_path(@chest) %> |
+<%= link_to 'Back', chests_path %>

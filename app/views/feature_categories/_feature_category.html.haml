@@ -1,0 +1,14 @@
+%table.data_list
+  %thead
+    %tr
+      %th Name
+      %th # of Features
+      %th Edit
+  %tbody
+    - feature_categories.each do |feature_category|
+      %tr
+        %td=feature_category.name
+        %td=h feature_category.features.size
+        %td.actions
+          = link_to edit_image, edit_feature_category_path(feature_category)
+          =# link_to delete_image, fabric, :confirm => 'Are you sure?', :method => :delete

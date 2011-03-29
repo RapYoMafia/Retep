@@ -1,0 +1,17 @@
+<h1>Editing body_shape</h1>
+
+<% semantic_form_for @body_shape, :html => {:multipart => true} do |f|%>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+<%= f.input :photo, :as => :file %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @body_shape %> |
+<%= link_to 'Back', body_shapes_path %>

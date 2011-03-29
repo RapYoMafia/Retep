@@ -1,0 +1,16 @@
+%form#CreateForm{ :action => "/wizard/order", :method=>"get" }
+  %input{:type=>"hidden", :name=> "fabric", :value => @fabric}
+  - for feature_category in @feature_categories
+    %fieldset
+      %legend= feature_category.name
+      %ul
+        - for feature in feature_category.features
+          %li
+            %label{ :for => "feature#{feature.id}" }
+              %span
+                =   feature.name.capitalize
+              %img{ :src => feature.photo.url }
+            %input{ :name => "feature_category_#{feature_category.id}_#{feature_category.name}", 
+            :type => "radio", "id" => "feature" + feature.id.to_s, :value=>feature.name }
+  %p
+    %input#CreateShirt{ :type => "submit", :value => "Create Shirt!" }

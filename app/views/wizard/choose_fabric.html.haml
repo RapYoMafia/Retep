@@ -1,0 +1,5 @@
+- form_remote_tag(:url=> {:controller => "wizard", :action => "get_fabrics"}, :update=>"choices") do
+  = collection_select(:color, :name, @colors, :id, :name, {}, {:id => "colors_collection"})
+  = collection_select(:style, :name, @styles, :id, :name, {}, {:id=> "styles_collection"})
+  = submit_tag 'show'
+#choices

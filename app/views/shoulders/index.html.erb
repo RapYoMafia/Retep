@@ -1,0 +1,22 @@
+<h1>Listing shoulders</h1>
+
+<table>
+  <tr>
+    <th>Preview</th>
+    <th>Name</th>
+  </tr>
+
+<% @shoulders.each do |shoulder| %>
+  <tr>
+    <td><%= image_tag shoulder.photo.url(:small_thumb) %></td>
+    <td><%=h shoulder.name %></td>
+    <td><%= link_to 'Show', shoulder %></td>
+    <td><%= link_to 'Edit', edit_shoulder_path(shoulder) %></td>
+    <td><%= link_to 'Destroy', shoulder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New shoulder', new_shoulder_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  neck_circum: 1.5
+  shoulder_width: 1.5
+  chest_circum: 1.5
+  front_armhole: 1.5
+  back_armhole: 1.5
+  waist_circum: 1.5
+  hip_circum: 1.5
+  shirt_length: 1.5
+  sleeve_length: 1.5
+  armhole_circum: 1.5
+  bicep_circum: 1.5
+  wrist_circum: 1.5
+  height_feet: 1.5
+  height_inches: 1.5
+  weight_lb: 1.5
+  shoulder: MyString
+  chest: MyString
+  body_shape: MyString
+
+two:
+  neck_circum: 1.5
+  shoulder_width: 1.5
+  chest_circum: 1.5
+  front_armhole: 1.5
+  back_armhole: 1.5
+  waist_circum: 1.5
+  hip_circum: 1.5
+  shirt_length: 1.5
+  sleeve_length: 1.5
+  armhole_circum: 1.5
+  bicep_circum: 1.5
+  wrist_circum: 1.5
+  height_feet: 1.5
+  height_inches: 1.5
+  weight_lb: 1.5
+  shoulder: MyString
+  chest: MyString
+  body_shape: MyString

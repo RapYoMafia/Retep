@@ -1,0 +1,4 @@
+%h2 New fabric
+= render :partial => "form", :locals => {:fabric => @fabric}
+- content_for :sub_menu do
+  %li= link_to 'Back', fabrics_path, :class=>"back_link"

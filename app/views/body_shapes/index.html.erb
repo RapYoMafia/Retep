@@ -1,0 +1,22 @@
+<h1>Listing body_shapes</h1>
+
+<table>
+  <tr>
+    <th>Preview</th>
+    <th>Name</th>
+  </tr>
+
+<% @body_shapes.each do |body_shape| %>
+  <tr>
+    <td><%= image_tag body_shape.photo.url(:small_thumb) %></td>
+    <td><%=h body_shape.name %></td>
+    <td><%= link_to 'Show', body_shape %></td>
+    <td><%= link_to 'Edit', edit_body_shape_path(body_shape) %></td>
+    <td><%= link_to 'Destroy', body_shape, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New body_shape', new_body_shape_path %>

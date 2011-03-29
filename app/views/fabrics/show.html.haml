@@ -1,0 +1,21 @@
+%h2= "Fabric \"#{@fabric.name}\""
+- content_tag_for :div, @fabric do
+  %ul.show_list
+    %li
+      %strong Name:
+      =h @fabric.name
+    %li
+      %strong Color:
+      =h @fabric.color.name
+    %li
+      %strong Price:
+      =h @fabric.price
+    %li
+      %strong Style:
+      =h @fabric.style.name
+    %li
+      %strong Photo:
+      =image_tag @fabric.photo.url
+- content_for :sub_menu do
+  %li= link_to 'Edit', edit_fabric_path(@fabric), :class=>"edit_link", :class=>"edit_link"
+  %li= link_to 'Back', fabrics_path, :class=>"back_link", :class=>"back_link"

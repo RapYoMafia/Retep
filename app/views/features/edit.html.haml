@@ -1,0 +1,5 @@
+%h2 Editing feature
+= render :partial => "form", :locals => {:feature => @feature}
+- content_for :sub_menu do
+  %li= link_to 'Back', features_path, :class=>"back_link"
+  %li= link_to 'Destroy', @feature, :confirm => 'Are you sure?', :method => :delete  , :class=>"delete_link"

@@ -1,0 +1,4 @@
+%h2 New feature
+= render :partial => "form", :locals => {:feature => @feature}
+- content_for :sub_menu do
+  %li= link_to 'Back', features_path

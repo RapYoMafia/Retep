@@ -1,0 +1,9 @@
+%h2 Feature Colors
+- if !@colors.empty?
+  .colors
+    = render :partial => "color", :locals=>{:colors => @colors}
+  = will_paginate(@colors)
+- else
+  %p There are no colors to show yet.
+- content_for :sub_menu do
+  %li= link_to 'Create New Color', new_color_path, :class=> "add_link"

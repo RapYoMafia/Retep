@@ -1,0 +1,22 @@
+<h1>Listing chests</h1>
+
+<table>
+  <tr>
+    <th>Preview</th>
+    <th>Name</th>
+  </tr>
+
+<% @chests.each do |chest| %>
+  <tr>
+    <td><%= image_tag chest.photo.url(:small_thumb) %></td>
+    <td><%=h chest.name %></td>
+    <td><%= link_to 'Show', chest %></td>
+    <td><%= link_to 'Edit', edit_chest_path(chest) %></td>
+    <td><%= link_to 'Destroy', chest, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New chest', new_chest_path %>

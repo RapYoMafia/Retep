@@ -1,0 +1,4 @@
+%h2 New feature_category
+= render :partial => "form", :locals => {:feature_category => @feature_category}
+- content_for :sub_menu do
+  %li= link_to 'Back', feature_categories_path, :class=> "back_link"

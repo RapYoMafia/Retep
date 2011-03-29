@@ -1,0 +1,54 @@
+<h1>Listing measurements</h1>
+
+<table>
+  <tr>
+    <th>Neck circum</th>
+    <th>Shoulder width</th>
+    <th>Chest circum</th>
+    <th>Front armhole</th>
+    <th>Back armhole</th>
+    <th>Waist circum</th>
+    <th>Hip circum</th>
+    <th>Shirt length</th>
+    <th>Sleeve length</th>
+    <th>Armhole circum</th>
+    <th>Bicep circum</th>
+    <th>Wrist circum</th>
+    <th>Height feet</th>
+    <th>Height inches</th>
+    <th>Weight lb</th>
+    <th>Shoulder</th>
+    <th>Chest</th>
+    <th>Body shape</th>
+  </tr>
+
+<% @measurements.each do |measurement| %>
+  <tr>
+    <td><%=h measurement.neck_circum %></td>
+    <td><%=h measurement.shoulder_width %></td>
+    <td><%=h measurement.chest_circum %></td>
+    <td><%=h measurement.front_armhole %></td>
+    <td><%=h measurement.back_armhole %></td>
+    <td><%=h measurement.waist_circum %></td>
+    <td><%=h measurement.hip_circum %></td>
+    <td><%=h measurement.shirt_length %></td>
+    <td><%=h measurement.sleeve_length %></td>
+    <td><%=h measurement.armhole_circum %></td>
+    <td><%=h measurement.bicep_circum %></td>
+    <td><%=h measurement.wrist_circum %></td>
+    <td><%=h measurement.height_feet %></td>
+    <td><%=h measurement.height_inches %></td>
+    <td><%=h measurement.weight_lb %></td>
+    <td><%=h measurement.shoulder %></td>
+    <td><%=h measurement.chest %></td>
+    <td><%=h measurement.body_shape %></td>
+    <td><%= link_to 'Show', measurement %></td>
+    <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
+    <td><%= link_to 'Destroy', measurement, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New measurement', new_measurement_path %>

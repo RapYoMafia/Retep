@@ -1,0 +1,19 @@
+<h1>Editing shoulder</h1>
+
+<% semantic_form_for @shoulder, :html => {:multipart => true} do |f|%>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.input :photo, :as => :file %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @shoulder %> |
+<%= link_to 'Back', shoulders_path %>

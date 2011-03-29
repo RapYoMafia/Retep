@@ -1,0 +1,14 @@
+- semantic_form_for (fabric, :html => {:multipart => true}) do |form|
+  - form.inputs do
+    = form.input :name
+    = form.input :fabric_number
+    = form.input :style
+    = form.input :color #, :as => "select", :selected => "1"
+    = form.input :price
+    = form.input :photo, :as => :file
+    - if fabric.id
+      %label.current_image Current Photo
+      %div.current_image= image_tag fabric.photo.url(:thumb)
+
+
+  = form.buttons

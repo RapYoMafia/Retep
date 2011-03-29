@@ -1,0 +1,10 @@
+<p>
+  <b>Name:</b>
+  <%=h @shoulder.name %> 
+</p>
+</br>
+<%= image_tag @shoulder.photo.url (:small)%>
+</br>
+
+<%= link_to 'Edit', edit_shoulder_path(@shoulder) %> |
+<%= link_to 'Back', shoulders_path %>

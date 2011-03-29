@@ -1,0 +1,8 @@
+<p>
+  <b>Name:</b>
+  <%=h @body_shape.name %>
+</p>
+<%= image_tag @body_shape.photo.url (:small)%>
+<br>
+<%= link_to 'Edit', edit_body_shape_path(@body_shape) %> |
+<%= link_to 'Back', body_shapes_path %>

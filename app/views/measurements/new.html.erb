@@ -1,0 +1,124 @@
+<h1>New measurement</h1>
+
+<% form_for(@measurement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :neck_circum %><br />
+    <%= f.text_field :neck_circum %>
+  </p>
+  <p>
+    <%= f.label :shoulder_width %><br />
+    <%= f.text_field :shoulder_width %>
+  </p>
+  <p>
+    <%= f.label :chest_circum %><br />
+    <%= f.text_field :chest_circum %>
+  </p>
+  <p>
+    <%= f.label :front_armhole %><br />
+    <%= f.text_field :front_armhole %>
+  </p>
+  <p>
+    <%= f.label :back_armhole %><br />
+    <%= f.text_field :back_armhole %>
+  </p>
+  <p>
+    <%= f.label :waist_circum %><br />
+    <%= f.text_field :waist_circum %>
+  </p>
+  <p>
+    <%= f.label :hip_circum %><br />
+    <%= f.text_field :hip_circum %>
+  </p>
+  <p>
+    <%= f.label :shirt_length %><br />
+    <%= f.text_field :shirt_length %>
+  </p>
+  <p>
+    <%= f.label :sleeve_length %><br />
+    <%= f.text_field :sleeve_length %>
+  </p>
+  <p>
+    <%= f.label :armhole_circum %><br />
+    <%= f.text_field :armhole_circum %>
+  </p>
+  <p>
+    <%= f.label :bicep_circum %><br />
+    <%= f.text_field :bicep_circum %>
+  </p>
+  <p>
+    <%= f.label :wrist_circum %><br />
+    <%= f.text_field :wrist_circum %>
+  </p>
+  <p>
+    <%= f.label :height_feet %><br />
+    <%= f.text_field :height_feet %>
+  </p>
+  <p>
+    <%= f.label :height_inches %><br />
+    <%= f.text_field :height_inches %>
+  </p>
+  <p>
+    <%= f.label :weight_lb %><br />
+    <%= f.text_field :weight_lb %>
+  </p>
+<!--  <p>-->
+<!--    <%= f.label :shoulder %><br />-->
+<!--    <%= f.text_field :shoulder %>-->
+<!--  </p>-->
+
+<p>
+Shoulder <br>
+<td><img alt="Men_shoulders_square" src="/system/photos/1/small/men_shoulders_square.gif?1301392822" /></td>
+<img alt="Men_shoulders_average" src="/system/photos/2/small/men_shoulders_average.gif?1301393399" />
+<img alt="Men_shoulders_sloping" src="/system/photos/3/small/men_shoulders_sloping.gif?1301393438" />
+
+<br>
+<input type="radio" name="measurement[shoulder]" value="Square"> Square
+<input type="radio" name="measurement[shoulder]" value="Average"> Average
+<input type="radio" name="measurement[shoulder]" value="Sloping"> Sloping
+</p>
+
+<!--  <p>-->
+<!--    <%= f.label :chest %><br />-->
+<!--    <%= f.text_field :chest %>-->
+<!--  </p>-->
+<p>
+Chest <br>
+<img alt="Men_chest_muscular" src="/system/photos/1/small/men_chest_muscular.gif?1301394083" />
+<img alt="Men_chest_average" src="/system/photos/2/small/men_chest_average.gif?1301394262" />
+<img alt="Men_chest_large" src="/system/photos/3/small/men_chest_large.gif?1301394275" />
+
+<br>
+<input type="radio" name="measurement[chest]" value="Muscular"> Muscular
+<input type="radio" name="measurement[chest]" value="Average"> Average
+<input type="radio" name="measurement[chest]" value="Large"> Large
+</p>
+
+
+<!--  <p>-->
+<!--    <%= f.label :body_shape %><br />-->
+<!--    <%= f.text_field :body_shape %>-->
+<!--  </p>-->
+<p>
+Body Shape <br>
+<img alt="Men_body_flat" src="/system/photos/1/small/men_body_flat.gif?1301399884" />
+<img alt="Men_body_average" src="/system/photos/2/small/men_body_average.gif?1301400010" />
+<img alt="Men_body_large" src="/system/photos/3/small/men_body_large.gif?1301400107" />
+<br>
+
+
+
+<input type="radio" name="measurement[body_shape]" value="Flat"> Flat
+<input type="radio" name="measurement[body_shape]" value="Average"> Average
+<input type="radio" name="measurement[body_shape]" value="Sloping"> Large
+</p>
+
+
+  <p>
+    <%= f.submit 'Create Measurement' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', measurements_path %>

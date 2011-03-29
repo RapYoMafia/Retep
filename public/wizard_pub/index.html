@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Create a Shirt Prototype</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+  <script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf-8" src="js/FormToWizard/formToWizard.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf-8">
+    $(document).ready(
+    function() {
+      $("#CreateForm").formToWizard({ submitButton: "CreateShirt" });
+      
+      $("input").change(function(){
+        $(this).parents("fieldset").find(".highlighted").removeClass("highlighted");
+        $(this).parent().addClass("highlighted");
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  <div id="container">
+  <form id="CreateForm" action="">
+        <fieldset>
+            <legend>Choose Fabric</legend>
+            <ul>
+            <li>
+              <label for="fabric1"><span>Air</span><img src="img/fabric/1.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric1" checked="true" />
+            </li>
+            <li>
+              <label for="fabric2"><span>Aliseo Non-iron</span><img src="img/fabric/2.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric2" />
+            </li>
+            <li>
+              <label for="fabric3"><span>Aliseo Non-iron</span><img src="img/fabric/3.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric3" />
+            </li>
+            <li>
+              <label for="fabric4"><span>Bikini</span><img src="img/fabric/4.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric4" />
+            </li>
+            <li>
+              <label for="fabric5"><span>Bikini</span><img src="img/fabric/5.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric5" checked="true" />
+            </li>
+            <li>
+              <label for="fabric6"><span>Bikini</span><img src="img/fabric/6.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric6" />
+            </li>
+            <li>
+              <label for="fabric7"><span>Daria Operato</span><img src="img/fabric/7.jpg" /></label>
+              <input type="radio" name="fabric" value="1" id="fabric7" />
+            </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Choose Collar</legend>
+            <ul>
+            <li>
+              <label for="collar1"><span>Classic</span><img src="img/collar/1.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar1" checked/>
+            </li>
+            <li>
+              <label for="collar2"><span>Prince of Wales</span><img src="img/collar/2.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar2" />
+            </li>
+            <li>
+              <label for="collar3"><span>Duke of Windsor</span><img src="img/collar/3.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar3" />
+            </li>
+            <li>
+              <label for="collar4"><span>Fashion</span><img src="img/collar/4.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar4" />
+            </li>
+            <li>
+              <label for="collar5"><span>Napoleon</span><img src="img/collar/5.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar5" />
+            </li>
+            <li>
+              <label for="collar6"><span>Button Down</span><img src="img/collar/6.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar6" />
+            </li>
+            <li>
+              <label for="collar7"><span>Hidden Button</span><img src="img/collar/7.gif" /></label>
+              <input type="radio" name="collar" value="1" id="collar7" />
+            </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Choose Cuffs</legend>
+            <ul>
+            <li>
+              <label for="cuff1"><span>Single (angle)</span><img src="img/cuff/1.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff1" checked/>
+            </li>
+            <li>
+              <label for="cuff2"><span>Double (angle)</span><img src="img/cuff/2.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff2" />
+            </li>
+            <li>
+              <label for="cuff3"><span>3 Button (angle)</span><img src="img/cuff/3.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff3" />
+            </li>
+            <li>
+              <label for="cuff4"><span>French Cuff</span><img src="img/cuff/4.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff4" />
+            </li>
+            <li>
+              <label for="cuff5"><span>Single (round)</span><img src="img/cuff/5.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff5" />
+            </li>
+            <li>
+              <label for="cuff6"><span>Double (round)</span><img src="img/cuff/6.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff6" />
+            </li>
+            <li>
+              <label for="cuff7"><span>French Cuff (round)</span><img src="img/cuff/7.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff7" />
+            </li>
+            <li>
+              <label for="cuff8"><span>Single (square)</span><img src="img/cuff/8.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff8" />
+            </li>
+            <li>
+              <label for="cuff9"><span>Double (square)</span><img src="img/cuff/9.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff9" />
+            </li>
+            <li>
+              <label for="cuff10"><span>3 Button (square)</span><img src="img/cuff/10.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff10" />
+            </li>
+            <li>
+              <label for="cuff11"><span>French Cuff (square)</span><img src="img/cuff/11.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff11" />
+            </li>
+            <li>
+              <label for="cuff12"><span>Short Sleeve</span><img src="img/cuff/12.gif" /></label>
+              <input type="radio" name="cuff" value="1" id="cuff12" />
+            </li>
+            </ul>
+        </fieldset>
+        <p>
+            <input id="CreateShirt" type="button" value="Create Shirt!" />
+        </p>
+   </form></div>
+</body>
+</html>
+

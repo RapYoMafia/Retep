@@ -1,0 +1,10 @@
+%h2 Feature Styles
+- if !@styles.empty?
+  .styles
+    = render :partial => "style", :locals => {:styles => @styles}
+  = will_paginate(@styles)
+- else
+  %p There are no styles to show yet.
+ 
+- content_for :sub_menu do
+  %li= link_to 'Create New Style', new_style_path, :class=>"add_link"

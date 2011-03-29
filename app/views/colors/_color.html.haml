@@ -1,0 +1,15 @@
+
+%table.data_list
+  %thead
+    %tr
+      %th Name
+      %th # of Fabrics
+      %th Edit
+  %tbody
+    - colors.each do |color|
+      %tr
+        %td=h color.name
+        %td=h color.fabrics.size
+        %td.actions
+          = link_to edit_image, edit_color_path(color)
+          =# link_to delete_image, fabric, :confirm => 'Are you sure?', :method => :delete

@@ -1,0 +1,9 @@
+%h2= "Color \"#{@color.to_param}\""
+- content_tag_for :div, @color do
+  %ul
+    %li
+      %strong Name:
+      =h @color.name
+- content_for :sub_menu do
+  %li= link_to 'Edit', edit_color_path(@color), :class=>"edit_link"
+  %li= link_to 'Back', colors_path, :class=>"back_link"

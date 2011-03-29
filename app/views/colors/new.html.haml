@@ -1,0 +1,4 @@
+%h2 New color
+= render :partial => "form", :locals => {:color => @color}
+- content_for :sub_menu do
+  %li= link_to 'Back', colors_path, :class=>"back_link"

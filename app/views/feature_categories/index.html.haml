@@ -1,0 +1,9 @@
+%h2 Feature Categories
+- if !@feature_categories.empty?
+  .feature_categories
+    = render :partial => "feature_category", :locals => {:feature_categories =>@feature_categories}
+  = will_paginate(@feature_categories)
+- else
+  %p There are no feature_categories to show yet.
+- content_for :sub_menu do
+  %li= link_to 'Create New Feature Category', new_feature_category_path, :class=>"add_link"

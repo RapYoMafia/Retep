@@ -1,0 +1,9 @@
+%h2= "Style \"#{@style.to_param}\""
+- content_tag_for :div, @style do
+  %ul
+    %li
+      %strong Name:
+      =h @style.name
+- content_for :sub_menu do
+  %li= link_to 'Edit', edit_style_path(@style), :class=>"edit_link"
+  %li= link_to 'Back', styles_path, :class=>"back_link"

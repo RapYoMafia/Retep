@@ -1,0 +1,93 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    
+    = stylesheet_link_tag "reset", :media => "screen"
+    = stylesheet_link_tag "960", :media => "screen"
+    = stylesheet_link_tag "text", :media => "screen"
+    = stylesheet_link_tag "application", :media => "screen"
+    
+    
+    %title Peter Fashion Front End Control Center | http://peterfashion.com
+  %body
+    / Top: Begin    
+    #top
+      .container_16
+        #top_logo.grid_8
+          %img{:src => "/images/icons/monitor.png"}/
+          %h1 Peter Fashion Front End
+        - if admin_signed_in?
+          Signed in as =
+          - current_admin.email 
+       
+        %a.button{:href => "admins/sign_out" } Logout 
+         
+        .clear
+    / Top: End    / Body: Begin    
+    .container_16
+      #notifications.grid_16
+        -#%ul
+          -#%li This is a neutral notification.
+          -#%li.error This is an error notification.
+          -#%li.warning This is a warning notification.
+          -#%li.success This is a success notification.
+      .clear
+
+
+
+      #main.grid_12
+        .grid_12.alpha.omega
+          .box
+            = yield
+        .clear
+
+      #sidebar.grid_4 
+        %ul
+          %li.first.last.expanded
+            %a.title.active{:href => "#index"}
+              %img{:src => "/images/icons/book.png"}>/
+              Menu
+            %a.toggle
+            .content
+              %ul
+                %li= link_to "Features",  :controller => "features", :action=> "index"
+                %li= link_to "Fabrics",  :controller => "fabrics", :action=> "index"
+
+
+        %ul
+          %li.first.last.expanded
+            %a.title.active{:href => "#system"}
+              %img{:src => "/images/icons/application_form.png"}>/
+              System Settings
+            %a.toggle
+            .content
+              %ul
+                %li= link_to "Feature Category", :controller => "feature_categories", :action=> "index"
+                %li= link_to "Fabric Colors", :controller => "colors", :action=> "index"
+                %li= link_to "Fabric Styles",  :controller => "styles", :action=> "index"
+                
+        %ul
+          %li.expanded.first
+            %a.title{:href => "#"}
+              %img{:src => "/images/icons/images.png"}>/
+              Actions
+            %a.toggle
+            .content
+              %ul
+                =yield :sub_menu
+          %li.last
+            %a.title{:href => "#"}
+              %img{:src => "/images/icons/door_in.png"}>/
+              LogOut
+
+
+      .clear
+
+      #footer
+        .grid_8
+        .grid_8.right
+          \&nbsp;
+    / Body: End    
+    %script{:src => "/javascripts/jquery.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/dashboard.js", :type => "text/javascript"}
